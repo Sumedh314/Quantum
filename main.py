@@ -7,7 +7,7 @@ class duet3d(BaseApp):
         pass
 
 
-duet = Duet3dDev
+duet = Duet3dDev()
 
 if __name__ == '__main__':
     import sys
