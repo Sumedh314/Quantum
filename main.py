@@ -1,8 +1,8 @@
 from duet_3d_dev import Duet3dDev
-from ScopeFoundry import BaseApp
+from ScopeFoundry import BaseMicroscopeApp
 
 
-class Duet3d(BaseApp):
+class Duet3d(BaseMicroscopeApp):
 
     name = 'microscope'
 
