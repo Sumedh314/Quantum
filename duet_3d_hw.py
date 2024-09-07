@@ -1,6 +1,5 @@
 from ScopeFoundry import HardwareComponent
 from duet_3d_dev import Duet3dDev
-import requests
 
 
 class Duet3dHW(HardwareComponent):
@@ -39,15 +38,6 @@ class Duet3dHW(HardwareComponent):
         )
         
         self.read_from_hardware()
-    
-    # Test to make sure device is connected 
-    def connect_to_hardware(self):
-        response = requests.get(f'http://{self.duet3d_dev.ip_address}/rr_gcode?gcode=M115')
-        
-        if response.status_code == 200:
-            print("Connected")
-        else:
-            print("Error connecting")
 
     # Remove connection to device
     def disconnect(self):

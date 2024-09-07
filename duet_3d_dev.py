@@ -5,7 +5,6 @@ class Duet3dDev(object):
     # Create new object
     def __init__(self):
         self.ip_address = 'cataloger.local'
-        self.axes = ['X', 'Y', 'Z']
 
 
     # Home all the axes

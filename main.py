@@ -1,10 +1,15 @@
 from duet_3d_dev import Duet3dDev
-from ScopeFoundry import BaseApp
+from ScopeFoundry import BaseMicroscopeApp
 
 
-class duet3d(BaseApp):
+class Duet3d(BaseMicroscopeApp):
+
+    name = 'microscope'
+
     def setup(self):
-        pass
+        from duet_3d_hw import Duet3dHW
+        self.add_hardware(Duet3dHW(self))
+
 
 
 duet = Duet3dDev()
@@ -12,5 +17,5 @@ duet = Duet3dDev()
 if __name__ == '__main__':
     import sys
     
-    app = duet3d(sys.argv)
+    app = Duet3d(sys.argv)
     sys.exit(app.exec_())
